@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SyllaGen Enhanced with Layout Options</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>SyllaGen Enhanced with Layout Options</h1>
+    <form id="syllabus-form">
+        <label for="user-html">Paste User HTML:</label>
+        <textarea id="user-html" rows="6" required placeholder="Paste the HTML of the new syllabus page here"></textarea>
+
+        <label for="course-promise">Course Promise:</label>
+        <textarea id="course-promise" rows="4" required placeholder="Join this course and gain X. You will leave with X."></textarea>
+
+        <label for="school">Select School (Override if not detected):</label>
+        <select id="school">
+            <option value="TBS">TBS - The Business School</option>
+            <option value="SSET">SSET - School of Science, Engineering & Technology</option>
+        </select>
+
+        <label for="layout-choice">Select Layout:</label>
+        <select id="layout-choice">
+            <option value="12">12 Modules (3 columns)</option>
+            <option value="8">8 Modules (2 columns)</option>
+        </select>
+
+        <label for="ilw-position">Select ILW Position:</label>
+        <select id="ilw-position">
+            <option value="7">Week 7 (Default)</option>
+            <option value="5">Week 5</option>
+            <option value="6">Week 6</option>
+            <option value="8">Week 8</option>
+            <option value="9">Week 9</option>
+        </select>
+
+        <div id="module-container"></div>
+
+        <button type="submit">Generate Code</button>
+        <button type="button" id="copy-button">Copy Code</button>
+    </form>
+
+    <h2>Generated Code:</h2>
+    <div id="generated-code"></div>
+
+    <!-- Link to the external JavaScript file (place at the end of the body) -->
+    <script src="script.js"></script>
+</body>
+</html>
